@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+body{
+    font-family: 'Rampart+One',sans-serif; 
+}
+
+#about_main {
+  width: 100%;
+  justify-content: end;
+  margin-top: 50px;
+  position: absolute;
+    
+    
+    
+}
+
+#about_main .container {
+  width: 800px;
+    margin-left: 180px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family:'raleway', sans-serif;
+  font-size:14px;
+  font-weight:400;
+  color:#777;
+}
+
+#team img{
+  margin-top: -45px;
+height: 90px;
+  border-radius: 50%;
+    box-shadow: 0.2px 0px 10px #2f3249;
+}
+
+#team i{
+  font-size: 26px;
+  color:#555;
+}
+
+#team p{
+  font-weight:500;
+}
+
+#team .card{
+  border-radius:0;
+  background-color: #e0e0e0;
+  transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+   border: none;
+   margin-bottom: 75px;
+    border-radius: 10px;
+    height: 230px;
+    
+}
+
+#team .card:hover{
+  background: #2f3249;
+  color:#fff;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 15px #2f3249;
+}
+
+#team .card:hover h3, #team .card:hover i{
+  color: #fff;
+}
+
+@media screen and (max-width: 1200px) {
+  #about_main .container {
+    width: 500px;
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #about_main .container {
+    position: absolute;
+      width: 400px;
+      margin-left: -1000px;
+      
+  }
+}

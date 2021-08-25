@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>nav</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/template-style.css" />
+    <!--link rel="stylesheet" href="css/main.css" /-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/landing-main.css" />
+    <script src="js/template-js.js"></script>
+  </head>
+  <body>
+    <div class="header"></div>
+    <input type="checkbox" id="openMenu" style="display: none" />
+    <label
+      for="openMenu"
+      id="toggler"
+      onmouseover="glow()"
+      onmouseout="blour()"
+      ontouchstart="glow()"
+      ontouchend="blour()"
+    >
+      <div class="spinner sp-top"></div>
+      <div class="spinner sp-middle"></div>
+      <div class="spinner sp-bottom"></div>
+    </label>
+    <span class="profile">
+      <a id="login" href="#">LOG IN</a>
+      <a id="signin" href="#">SIGN IN</a>
+      <!--a href="#">
+        <img src="image/profile.jpg" />
+      </a-->
+    </span>
+    <div id="toggleMenu">
+      <ul class="menu">
+        <li>
+          <div class="toggle-profile">
+            <img src="image/logo1.png" style="height: 80px; width: 180px" />
+          </div>
+        </li>
+        <li>
+          <a href="landing-page.html"><button>Home</button></a>
+        </li>
+        <li>
+          <a href="template.html"><button>Sercice</button></a>
+        </li>
+        <li>
+          <a href="test.html"><button>Blog</button></a>
+        </li>
+        <li>
+          <a href="about_us.html"><button>About Us</button></a>
+        </li>
+        <li>
+          <a href="#" class="logout"><button>logout</button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="svg">
+      <img src="image/doc3.svg" alt="team process banner" />
+    </div>
+    <div id="main">
+      <div class="container">
+        <div class="row custom-section d-flex align-items-center">
+          <div class="col-md-4 col-lg-4 col-sm-12 col-12 landing-text">
+            <h4>Transforming Lives</h4>
+            <h6>"ONLY A LIFE LIVED FOR OTHERS IS A LIFE WORTHWHILE."</h6>
+            <p>- ALBERT EINSTEIN</p>
+            <a href="template.html"><button>Book Now</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

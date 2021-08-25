@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  overflow-x: hidden;
+  height: 100%;
+  font-family: "poppins", sans-serif;
+  color: rgb(30, 32, 53);
+}
+body {
+  background: #ffff;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-image: linear-gradient(
+    to right,
+    rgb(192, 194, 214),
+    rgb(154, 146, 201),
+    rgb(192, 194, 214)
+  );
+  width: 100%;
+  height: 0px;
+  position: fixed;
+  z-index: 10;
+}
+#toggler {
+  height: 30px;
+  width: 34px;
+  top: 12px;
+  left: 20px;
+  position: fixed;
+  border-radius: 3px;
+  z-index: 10;
+  background-color: rgb(255, 255, 255, 0);
+}
+body .profile {
+  height: 24px;
+  width: 140px;
+  position: absolute;
+  right: 50;
+  border-radius: 20px;
+  top: 50px;
+  background-color: none;
+  display: flex;
+  font-size: 12px;
+  z-index: 60;
+}
+.profile #login {
+  background-color: rgb(53, 60, 117);
+  text-decoration: none;
+  display: block;
+  color: rgb(237, 238, 243);
+  width: 70px;
+  text-align: center;
+  padding: 2px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right: 1px solid rgba(216, 220, 240);
+}
+.profile #signin {
+  background-color: rgb(53, 60, 117);
+  text-decoration: none;
+  display: block;
+  color: rgb(237, 238, 243);
+  width: 70px;
+  padding: 2px;
+  text-align: center;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-left: none;
+}
+.profile a img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 120px;
+}
+.profile #login:hover,
+.profile #signin:hover {
+  color: rgb(41, 45, 75);
+  background-color: rgba(216, 220, 240);
+  box-shadow: inset rgb(38, 28, 65) 0px 1px 4px 0px;
+}
+#search_field {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 100px;
+  padding-bottom: 50;
+  position: absolute;
+  margin-bottom: 20px;
+}
+#openMenu:checked ~ #toggleMenu {
+  transform: translateX(0px);
+}
+#toggleMenu {
+  background-color: rgb(47, 50, 73);
+  width: 250px;
+  height: 100%;
+  margin-top: 0px;
+  position: fixed;
+  z-index: 40;
+  transform: translateX(0px);
+  transition: transform 250ms ease-in-out;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-top: 80px;
+}
+.menu li {
+  padding-right: 20px;
+}
+.menu li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+    font-size: 15px;
+  display: block;
+  padding-top: 10px;
+}
+.menu li button {
+  color: rgb(255, 255, 255);
+  position: relative;
+  border: none;
+  background-color: rgb(47, 50, 73);
+  padding-left: 100px;
+  padding-right: 70px;
+  padding-top: 10px;
+  margin-left: -10px;
+  padding-bottom: 10px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.9);
+  transition: ease-out 0.3s;
+}
+.menu li .logout {
+  margin-top: 100px;
+}
+.menu li .toggle-profile {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.spinner {
+  margin-top: 5px;
+  height: 4px;
+  width: 26px;
+  margin-left: 4px;
+  background-color: rgb(41, 45, 75);
+  transition: 0.3s;
+}
+.spinner.sp-middle,
+.spinner.spinner.sp-bottom {
+  margin-top: 3px;
+}
+.menu li button:hover {
+  position: relative;
+  border: none;
+  color: rgb(41, 45, 75);
+  padding-left: 100px;
+  padding-right: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: inset 250px 0 0 0 rgba(255, 255, 255, 0.9);
+}
+#logo {
+  z-index: 90;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.search_input {
+  height: 40px;
+}
+
+.search_input input::placeholder {
+  color: rgb(162, 165, 187);
+}
+.search_input input {
+  height: inherit;
+  width: 400px;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    rgb(41, 42, 95),
+    rgba(56, 56, 109, 0.942),
+    rgb(35, 36, 83)
+  );
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  color: rgb(216, 220, 240);
+}
+.search_input input:focus {
+  background-image: linear-gradient(
+    to right,
+    rgb(35, 36, 83),
+    rgb(76, 77, 165),
+    rgba(45, 47, 102)
+  );
+  box-shadow: inset rgb(0, 0, 0) 0px 1px 4px 0px;
+  outline: none;
+}
+.search_input button {
+  height: inherit;
+  width: 100px;
+  border-style: none;
+  border-radius: 20px;
+  margin-left: 0px;
+  color: rgba(38, 44, 78, 0.705);
+  text-align: center;
+  padding-bottom: 5px;
+  background-image: linear-gradient(
+    to right,
+    rgba(17, 19, 65, 0.329),
+    rgba(91, 95, 204, 0.329)
+  );
+  box-shadow: rgba(58, 39, 151, 0.5) 0px 0px 0px 2px,
+    rgb(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(95, 53, 53, 0.08) 0px 1px 0px inset;
+}
+.search_input button:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(17, 19, 65, 0.329),
+    rgba(91, 95, 204, 0.329)
+  );
+  box-shadow: inset rgb(69, 75, 117) 0px 1px 4px 0px;
+}
+@media screen and (max-width: 1240px) and (min-width: 640px) {
+  .header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 50;
+  }
+  body .profile {
+    height: 24px;
+    width: 140px;
+    position: fixed;
+    right: 50;
+    border-radius: 20px;
+    top: 20px;
+    z-index: 60;
+    font-size: 12px;
+    background-color: none;
+    display: flex;
+  }
+  .profile a img {
+    height: 40px;
+    width: 40px;
+    margin-top: -10px;
+    border-radius: 50%;
+    margin-left: 120px;
+  }
+  #toggleMenu {
+    background-color: rgb(47, 50, 73);
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    margin-top: 60px;
+    z-index: 40;
+    transform: translateX(-250px);
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    transition: transform 290ms ease-in-out;
+  }
+  #search_field {
+    margin-top: 50px;
+    width: 100%;
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: absolute;
+  }
+
+  #toggler {
+    height: 30px;
+    width: 34px;
+    top: 12px;
+    left: 20px;
+    position: fixed;
+    border-radius: 3px;
+    z-index: 50;
+    background-color: rgb(255, 255, 255, 0);
+  }
+  /*#toggler:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+  }*/
+  .search_input input {
+    height: 38px;
+    width: 300px;
+    background-color: rgb(41, 45, 75);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+    color: rgb(216, 220, 240);
+    outline: none;
+  }
+  .search_input button {
+    height: 38px;
+    width: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    color: rgb(237, 238, 243);
+    background-color: rgb(162, 165, 187);
+  }
+}
+@media screen and (max-width: 640px) {
+  .header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 50;
+  }
+  body .profile {
+    height: 24px;
+    width: 150px;
+    position: fixed;
+    right: 50;
+    border-radius: 20px;
+    top: 20px;
+    z-index: 60;
+    font-size: 12px;
+    background-color: none;
+    display: flex;
+  }
+  .profile a img {
+    height: 40px;
+    width: 40px;
+    margin-top: -10px;
+    border-radius: 50%;
+    margin-left: 120px;
+  }
+  #search_field {
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 100px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    position: absolute;
+    margin-right: 50px;
+  }
+  #toggleMenu {
+    background-color: rgb(47, 50, 73);
+    width: 250px;
+    height: 100%;
+    margin-top: 60px;
+    position: fixed;
+    z-index: 40;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+  }
+
+  #toggler {
+    height: 30px;
+    width: 34px;
+    top: 12px;
+    left: 20px;
+    position: fixed;
+    border-radius: 3px;
+    z-index: 50;
+    background-color: rgb(255, 255, 255, 0);
+  }
+  /*#toggler:hover {
+    background-color: rgb(255, 255, 255, 0.5);
+  }*/
+  .search_input input {
+    height: 38px;
+    width: 250px;
+    background-color: rgb(41, 45, 75);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+    color: rgb(216, 220, 240);
+    outline: none;
+  }
+  .search_input button {
+    height: 38px;
+    width: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    color: rgb(237, 238, 243);
+    background-color: rgb(162, 165, 187);
+  }
+}

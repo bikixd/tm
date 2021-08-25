@@ -1,0 +1,141 @@
+#main {
+  width: 100%;
+  padding-bottom: 100px;
+  justify-content: end;
+  margin-top: 200px;
+  position: absolute;
+}
+#main .container {
+  width: 800px;
+}
+@media screen and (max-width: 1100px) and (min-width: 640px) {
+  #main .container {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 640px) {
+  #main .container {
+    width: 400px;
+  }
+}
+.d-details {
+  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.d-details img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+.d-details h2 {
+  padding-top: 20px;
+  font-size: 24px;
+  color: rgb(57, 65, 126);
+}
+.d-details h3 {
+  padding-top: 10px;
+  font-size: 12px;
+  padding-bottom: 20px;
+  color: rgb(108, 112, 153);
+}
+.d-details h4 .d-details a {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.d-details a button {
+  height: 40px;
+  width: 100px;
+  font-size: 12px;
+  border-style: none;
+  border-radius: 25px;
+  margin-left: 0px;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  text-align: center;
+  padding-bottom: 5px;
+  background-color: rgb(104, 108, 165);
+  box-shadow: rgba(0, 0, 0, 0.349) 0px 1px 4px 0px,
+    rgba(0, 0, 0, 0.349) 0px 2px 4px 1px;
+}
+.d-details a button:hover {
+  color: rgb(58, 62, 124);
+  background-color: rgb(202, 205, 245);
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0px 1px 4px 0px;
+}
+
+.list_doctor {
+  overflow: hidden;
+  height: 500px;
+  align-items: center;
+  padding: 10px;
+  height: 100;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 8px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.349) 0px 1px 2px 0px,
+    rgba(0, 0, 0, 0.349) 0px 1px 3px 1px;
+}
+.list_doctor img {
+  height: 50;
+  width: 50;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+.list_doctor div {
+  padding-top: 20px;
+}
+.list_doctor:hover {
+  box-shadow: inset rgb(104, 108, 165) 0px 1px 4px 0px;
+  background-color: rgb(236, 237, 252);
+}
+.name {
+  font-size: 20px;
+  color: rgb(113, 117, 156);
+  line-height: 2px;
+}
+.details {
+  font-size: 12px;
+  color: rgb(131, 136, 180);
+  line-height: 15px;
+}
+#times {
+  margin-top: 30px;
+}
+.time_list {
+  text-decoration: none;
+  height: 40;
+  display: flex;
+  border-radius: 5px;
+  color: rgba(63, 65, 104, 0.76);
+  background-color: rgba(184, 186, 231, 0.2);
+  margin: 8px;
+  box-shadow: rgba(18, 18, 56, 0.397) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.time_list:hover {
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(
+    to right,
+    rgba(17, 19, 65, 0.329),
+    rgba(91, 95, 204, 0.329)
+  );
+  margin: 5px;
+  box-shadow: rgba(21, 21, 51, 0.397) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.time_list .p1,
+.time_list .p2 {
+  width: 50%;
+  height: inherit;
+  position: relative;
+  top: 25%;
+  text-align: center;
+}

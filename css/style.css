@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  /*overflow-x: hidden;*/
+  height: 100%;
+  color: rgb(30, 32, 53);
+}
+body {
+  background: #ffff;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background: rgb(153, 158, 194);
+  width: 100%;
+  height: 0px;
+  position: fixed;
+  z-index: 10;
+}
+.toggler {
+  height: 24px;
+  width: 30px;
+  top: 20px;
+  left: 20px;
+  position: fixed;
+  border-radius: 3px;
+  z-index: 10;
+  background-color: rgb(255, 255, 255, 0);
+}
+body .profile {
+  height: 30px;
+  width: 180px;
+  position: fixed;
+  right: 50;
+  border-radius: 20px;
+  top: 50px;
+  background-color: none;
+  display: flex;
+}
+.profile #login {
+  background-color: rgb(41, 45, 75);
+  text-decoration: none;
+  display: block;
+  color: rgb(237, 238, 243);
+  width: 90px;
+  text-align: center;
+  padding-top: 1px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-right: 1px solid rgba(216, 220, 240);
+}
+.profile #signin {
+  background-color: rgb(41, 45, 75);
+  text-decoration: none;
+  display: block;
+  color: rgb(237, 238, 243);
+  width: 90px;
+  text-align: center;
+  padding-top: 1px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-left: none;
+}
+.profile a img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 120px;
+}
+.profile #login:hover,
+.profile #signin:hover {
+  color: rgb(41, 45, 75);
+  background-color: rgba(216, 220, 240);
+}
+#search_field {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 100px;
+  padding-bottom: 50;
+  position: absolute;
+  margin-bottom: 20px;
+}
+#openMenu:checked ~ #toggleMenu {
+  transform: translateX(0px);
+}
+#toggleMenu {
+  background-color: rgb(47, 50, 73);
+  width: 250px;
+  height: 100%;
+  margin-top: 0px;
+  position: fixed;
+  z-index: 40;
+  transform: translateX(0px);
+  transition: transform 250ms ease-in-out;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.menu {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  padding-top: 80px;
+}
+.menu li {
+  padding-right: 20px;
+}
+.menu li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: block;
+  padding-top: 10px;
+}
+.menu li button {
+  color: rgb(255, 255, 255);
+  position: relative;
+  border: none;
+  background-color: rgb(47, 50, 73);
+  padding-left: 100px;
+  padding-right: 70px;
+  padding-top: 10px;
+  margin-left: -10px;
+  padding-bottom: 10px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.9);
+  transition: ease-out 0.5s;
+}
+.menu li .logout {
+  margin-top: 100px;
+}
+.menu li .toggle-profile {
+  position: relative;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.spinner {
+  height: 4px;
+  background-color: rgb(41, 45, 75);
+  transition: 0.3s;
+}
+.spinner.sp-middle,
+.spinner.spinner.sp-bottom {
+  margin-top: 3px;
+}
+.menu li button:hover {
+  position: relative;
+  border: none;
+  color: rgb(41, 45, 75);
+  padding-left: 100px;
+  padding-right: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: inset 250px 0 0 0 rgba(255, 255, 255, 0.9);
+}
+#logo {
+  z-index: 90;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+.search_input input {
+  height: 38px;
+  width: 400px;
+  border: none;
+  background-color: rgb(41, 45, 75);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  color: rgb(216, 220, 240);
+}
+.search_input button {
+  height: 38px;
+  width: 100px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: none;
+  margin-left: -5px;
+  color: rgb(237, 238, 243);
+  text-align: center;
+  padding-bottom: 5px;
+  background-color: rgb(162, 165, 187);
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    background: rgb(153, 158, 194);
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 50;
+  }
+  body .profile {
+    height: 30px;
+    width: 180px;
+    position: fixed;
+    right: 50;
+    border-radius: 20px;
+    top: 20px;
+    z-index: 60;
+    background-color: none;
+    display: flex;
+  }
+  .profile a img {
+    height: 40px;
+    width: 40px;
+    margin-top: -10px;
+    border-radius: 50%;
+    margin-left: 120px;
+  }
+  #toggleMenu {
+    background-color: rgb(47, 50, 73);
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    margin-top: 60px;
+    z-index: 40;
+    transform: translateX(-300px);
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    transition: transform 290ms ease-in-out;
+  }
+  #search_field {
+    margin-top: 50px;
+    width: 100%;
+    padding-top: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: absolute;
+  }
+
+  .toggler {
+    height: 24px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    position: fixed;
+    border-radius: 3px;
+    z-index: 50;
+    background-color: rgb(255, 255, 255, 0);
+  }
+  .toggler:hover {
+    height: 24px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    position: fixed;
+    border-radius: 3px;
+    z-index: 50;
+    background-color: rgb(255, 255, 255, 0.7);
+  }
+  .search_input input {
+    height: 38px;
+    width: 300px;
+    background-color: rgb(41, 45, 75);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+    color: rgb(216, 220, 240);
+    outline: none;
+  }
+  .search_input button {
+    height: 38px;
+    width: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    color: rgb(237, 238, 243);
+    background-color: rgb(162, 165, 187);
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    background: rgb(153, 158, 194);
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 50;
+  }
+  body .profile {
+    height: 30px;
+    width: 180px;
+    position: fixed;
+    right: 50;
+    border-radius: 20px;
+    top: 20px;
+    z-index: 60;
+    background-color: none;
+    display: flex;
+  }
+  .profile a img {
+    height: 40px;
+    width: 40px;
+    margin-top: -10px;
+    border-radius: 50%;
+    margin-left: 120px;
+  }
+  #search_field {
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 100px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    position: absolute;
+    margin-right: 50px;
+  }
+  #toggleMenu {
+    background-color: rgb(47, 50, 73);
+    width: 300px;
+    height: 100%;
+    margin-top: 60px;
+    position: fixed;
+    z-index: 40;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    transform: translateX(-300px);
+    transition: transform 250ms ease-in-out;
+  }
+
+  .toggler {
+    height: 24px;
+    width: 30px;
+    top: 18px;
+    left: 20px;
+    position: fixed;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .toggler:hover {
+    height: 24px;
+    width: 30px;
+    top: 18px;
+    left: 20px;
+    position: absolute;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    z-index: 50;
+    transition: ;
+    background-color: rgba(255, 255, 255, 0.527);
+  }
+  .search_input input {
+    height: 38px;
+    width: 250px;
+    background-color: rgb(41, 45, 75);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 20px;
+    color: rgb(216, 220, 240);
+    outline: none;
+  }
+  .search_input button {
+    height: 38px;
+    width: 100px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    color: rgb(237, 238, 243);
+    background-color: rgb(162, 165, 187);
+  }
+}
